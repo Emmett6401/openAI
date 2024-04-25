@@ -4,7 +4,7 @@
 ### 다른 방법은 다음과 같이 환경변수에 등록하면 나의 API_KEY를 노출 하지 않고 사용 가능함.
 <img src = "https://github.com/Emmett6401/openAI/blob/main/111.png">
 ### 그럴때는 다음과 같이 사용합니다. 
-'''python
+```python
 from openai import OpenAI
 client = OpenAI()
 
@@ -17,4 +17,4 @@ completion = client.chat.completions.create(
 )
 
 print(completion.choices[0].message)
-'''
+```
