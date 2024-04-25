@@ -1,13 +1,13 @@
 # https://platform.openai.com/docs/quickstart
 # pip install --upgrade openai
-# api_key='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' 
+my_key='YOUR_KEY' 
 from openai import OpenAI
 from time import sleep
 import tkinter as tk
 from tkinter import messagebox
 
 tk.Tk().withdraw()  # 메인 윈도우를 숨김
-client = OpenAI(api_key='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')
+client = OpenAI(my_key)
 
 def get_completion():
     try:
