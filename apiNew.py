@@ -12,13 +12,13 @@ client = OpenAI(api_key='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')
 def get_completion():
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-3.5-turbo-1106",
             messages=[
-                {"role": "system", "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
-                {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
+                {"role": "system", "content": "You are a poetic assistant"},
+                {"role": "user", "content": "대한민국에 대해서 말해라. json"}
             ]
         )
-        print(response.choices[0].message)
+        print(response.choices[0].message.content)
     except Exception as e:
         if e.response.status_code == 429:
             # print(f"에러 요청 한도를 초과했습니다. 잠시 후 다시 시도해 주세요.\n상세 정보: {e.response.text} ")            
