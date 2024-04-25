@@ -17,15 +17,9 @@ setx OPENAI_API_KEY "your-api-key-here"
 ### 그럴때는 코드는 다음과 같이 사용합니다. 
 ```python
 from openai import OpenAI
-client = OpenAI()
+client = OpenAI() # 여기만 달라 집니다.
 
-completion = client.chat.completions.create(
-  model="gpt-3.5-turbo",
-  messages=[
-    {"role": "system", "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
-    {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
-  ]
-)
+# 나머지는 같아요 
 
 print(completion.choices[0].message)
 ```
